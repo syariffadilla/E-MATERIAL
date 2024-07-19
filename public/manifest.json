@@ -1,0 +1,17 @@
+{
+    "name": "Sumber Jaya Makmur",
+    "short_name": "SJM",
+    "start_url": "/index.php",
+    "background_color": "#00FFFF",
+    "description": "Toko Sumber Jaya Makmur",
+    "display": "fullscreen",
+    "theme_color": "#F0FFFF",
+    "icons": [
+        {
+            "src": "img/SumberBangunan.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

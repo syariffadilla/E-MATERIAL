@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Print Example</title>
+  <style>
+    @media print {
+      .print-button {
+        display: none;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" id="kembaliButton" class="print-button">Kembali</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Alamat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>30</td>
+        <td>Jakarta</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>25</td>
+        <td>Bandung</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+     window.print();
+    function beforePrint() {
+      // Sembunyikan tombol kembali saat di-print
+      document.getElementById('kembaliButton').style.display = 'none';
+    }
+
+    function afterPrint() {
+      // Tampilkan kembali tombol kembali setelah print selesai
+      document.getElementById('kembaliButton').style.display = 'inline';
+    }
+
+    // Tambahkan event listener untuk event sebelum dan setelah print
+    if (window.matchMedia) {
+      var mediaQueryList = window.matchMedia('print');
+      mediaQueryList.addListener(function(mql) {
+        if (mql.matches) {
+          beforePrint();
+        } else {
+          afterPrint();
+        }
+      });
+    }
+
+    // Fungsi untuk mendeteksi event print saat menggunakan window.print()
+    function detectPrint() {
+      beforePrint();
+      window.print();
+    }
+
+    // Contoh pemanggilan fungsi detectPrint()
+    document.getElementById('kembaliButton').addEventListener('click', detectPrint);
+  </script>
+</body>
+</html>
