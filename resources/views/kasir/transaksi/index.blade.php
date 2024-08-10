@@ -35,47 +35,47 @@
 
                                     <!-- <div class="mb-3 row">
 
-                                        <label for="pelanggan"
-                                            class="col-sm-4 col-form-label text-dark text-end">Pembeli</label>
+                                                                            <label for="pelanggan"
+                                                                                class="col-sm-4 col-form-label text-dark text-end">Pembeli</label>
 
-                                        <div class="col-sm-8">
-                                            <input required type="text" class="form-control" placeholder="Input disini"
-                                                id="pelanggan" data-pelanggan="{{ $pelanggan }}" name="nama_pelanggan"
-                                                required>
-                                               
-                                            <div data-bs-spy="scroll" data-bs-root-margin="0px 0px -40%"
-                                                data-bs-smooth-scroll="true" class="scrollspy-example z-3 position-absolute"
-                                                tabindex="0">
+                                                                            <div class="col-sm-8">
+                                                                                <input required type="text" class="form-control" placeholder="Input disini"
+                                                                                    id="pelanggan" data-pelanggan="{{ $pelanggan }}" name="nama_pelanggan"
+                                                                                    required>
 
-                                                <ul class="list-group" id="namePelanggan">
+                                                                                <div data-bs-spy="scroll" data-bs-root-margin="0px 0px -40%"
+                                                                                    data-bs-smooth-scroll="true" class="scrollspy-example z-3 position-absolute"
+                                                                                    tabindex="0">
 
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
+                                                                                    <ul class="list-group" id="namePelanggan">
 
-                                        <label for="pelanggan" class="col-sm-4 col-form-label text-dark text-end">No
-                                            Hp</label>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mb-3 row">
 
-                                        <div class="col-sm-8">
-                                            <input type="text" maxlength="10" class="form-control"
-                                                placeholder="Input disini" name="no_hp">
+                                                                            <label for="pelanggan" class="col-sm-4 col-form-label text-dark text-end">No
+                                                                                Hp</label>
 
-                                        </div>
-                                    </div>
-                                    <div class="mb-3 row">
+                                                                            <div class="col-sm-8">
+                                                                                <input type="text" maxlength="10" class="form-control"
+                                                                                    placeholder="Input disini" name="no_hp">
 
-                                        <label for="pelanggan" class="col-sm-4 col-form-label text-dark text-end">Alamat
-                                            Pembeli</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mb-3 row">
 
-                                        <div class="col-sm-8">
-                                            <textarea class="form-control" aria-label="With textarea" name="alamat"></textarea>
+                                                                            <label for="pelanggan" class="col-sm-4 col-form-label text-dark text-end">Alamat
+                                                                                Pembeli</label>
 
-                                        </div>
-                                    </div>
+                                                                            <div class="col-sm-8">
+                                                                                <textarea class="form-control" aria-label="With textarea" name="alamat"></textarea>
 
- -->
+                                                                            </div>
+                                                                        </div>
+
+                                     -->
 
                                 </div>
                             </div>
@@ -115,38 +115,39 @@
                                                     <td class="text-center"></td>
                                                     <td class="text-center">
                                                         <!-- <button type="button" class="btn btn-sm btn-info"
-                                                            id="add_manual"><i class="fas fa-plus"></i>
-                                                            Tambah Manual</button> -->
+                                                                                                id="add_manual"><i class="fas fa-plus"></i>
+                                                                                                Tambah Manual</button> -->
                                                         <button type="button" class="btn btn-sm btn-secondary"
                                                             data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                            id="tembah-modal-barang"><i class="fas fa-plus"></i>
-                                                            Tambah</button>
+                                                            id="tembah-modal-barang">
+                                                            <i class="fas fa-plus"></i> Tambah (F2)
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             </tfoot>
                                         </table>
                                     </div>
-                                  
+
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <p>Catatan :</p>
                                         <p class="mb-0 mt-4">
-                                            <div class="row">
-                                                <div class="col-lg-8">
-                                                    <li data-kasir="{{ $user->name }}" id="kasir">Dibuat Oleh Pegawai :
-                                                        {{ $user->name }}</li>
-                                                    <li>Perhatikan Kembali Sebelum Mengklik Save !</li>
-                                                    <li>Pastikan stok barang terinput sesuai .</li>
-                                            
-                                                </div>
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <li data-kasir="{{ $user->name }}" id="kasir">Dibuat Oleh Pegawai :
+                                                    {{ $user->name }}</li>
+                                                <li>Perhatikan Kembali Sebelum Mengklik Save !</li>
+                                                <li>Pastikan stok barang terinput sesuai .</li>
+
                                             </div>
-                                              </p>
+                                        </div>
+                                        </p>
                                         <div class="d-flex justify-content-center mt-4 float-end">
-                                           
-                                            <button type="submit" class="btn btn-primary" name="intruksi"
-                                                value="save">
-                                                    Save</i></button>
+
+                                            <button type="submit" class="btn btn-primary" name="intruksi" value="save"
+                                                id="save-button">
+                                                Save (F6) </i></button>
                                         </div>
                                         <div class="d-flex justify-content-center mt-4">
 
@@ -196,7 +197,7 @@
                                                     <th>Kategori</th>
                                                     <th>Nama</th>
                                                     <th>Stok</th>
-                                                
+
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -213,7 +214,7 @@
                     {{-- <h4 id="pesan-slug" class="text-info text-center">Silahkan Cari Barang</h4> --}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close (ESC)</button>
                 </div>
             </div>
         </div>
@@ -234,6 +235,24 @@
 @endsection
 
 @section('js')
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F2') {
+                event.preventDefault(); // Mencegah fungsi default F2 jika diperlukan
+                var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+                    keyboard: true
+                });
+                myModal.show(); // Tampilkan modal ketika F2 ditekan
+            }
+
+            if (event.key === 'F6') {
+                event.preventDefault(); // Mencegah fungsi default F6 jika diperlukan
+                document.getElementById('save-button').click(); // Simulasikan klik tombol Save
+            }
+        });
+    </script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"
         integrity="sha512-Rdk63VC+1UYzGSgd3u2iadi0joUrcwX0IWp2rTh6KXFoAmgOjRS99Vynz1lJPT8dLjvo6JZOqpAHJyfCEZ5KoA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -246,11 +265,11 @@
             });
         });
         $(document).on('keyup', '.harga-barang', function() {
-           
+
             var jumlah = $(this).closest('td').nextAll().eq(1).find('input').val();
-         
+
             // var diskon = harga * (discFix / 100);
-         
+
             // console.log(hasil);
             // console.log($(this).closest('td').nextAll().eq(2).find('input').val(1));
             $(this).closest('td').nextAll().eq(2).find('input').val(hasil.toLocaleString('id-ID'));
@@ -263,9 +282,9 @@
         $(document).on('keyup', '.discount-barang', function() {
             //var hargaAwal = $(this).closest('td').prevAll().eq(0).find('input').val();
             //var harga = parseFloat(hargaAwal.replace(/\./g, "").replace(/,/g, "."));
-           // var disc = parseFloat($(this).val().replace(/\./g, "").replace(/,/g, "."));
+            // var disc = parseFloat($(this).val().replace(/\./g, "").replace(/,/g, "."));
             var jumlah = $(this).closest('td').nextAll().eq(0).find('input').val();
-           // var discFix = parseFloat(disc);
+            // var discFix = parseFloat(disc);
             // var diskon = harga * (discFix / 100);
 
             var hargaSetelahDiskon = harga - disc;
@@ -280,13 +299,13 @@
         });
 
         $(document).on('keyup', '.jumlah-cart', function() {
-           // var hargaAwal = $(this).closest('td').prevAll().eq(1).find('input').val();
+            // var hargaAwal = $(this).closest('td').prevAll().eq(1).find('input').val();
             //var harga = parseFloat(hargaAwal.replace(/\./g, "").replace(/,/g, "."));
             //var disc = $(this).closest('td').prevAll().eq(0).find('input').val();
             var jumlah = $(this).val();
             var stok = $(this).data('stok');
             var kategori_satuan = $(this).data('kategori_satuan');
-           // var discFix = parseFloat(disc.replace(/\./g, "").replace(/,/g, "."));
+            // var discFix = parseFloat(disc.replace(/\./g, "").replace(/,/g, "."));
             if (stok) {
                 if (jumlah > stok) {
                     Swal.fire({
@@ -309,7 +328,7 @@
             }
             // alert(discFix);
             // // Menghitung harga setelah diskon
-           // var hargaSetelahDiskon = harga - discFix;
+            // var hargaSetelahDiskon = harga - discFix;
             //var hasil = hargaSetelahDiskon * jumlah;
 
             $(this).closest('td').nextAll().eq(0).find('input').val(hasil.toLocaleString('id-ID'));
@@ -440,7 +459,7 @@
                                     <td>${element.nama_kategori}</td>
                                     <td>${element.nama_barang}</td>
                                     <td>${element.stok}</td>
-                                   
+
                                     <td>
                                         <button type="button" onclick="tambahCart('${element.id}')" class="btn btn-link" id="tambah-barang">
                                             <svg class="icon-32" width="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -510,7 +529,7 @@
                                 <td class="col-2">
                                     <button type="button" class="btn btn-link" id="hapus-barang-cart">
                                             <svg class="icon-32" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                                    <path d="M14.3955 9.59497L9.60352 14.387" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                    <path d="M14.3971 14.3898L9.60107 9.59277" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>                                </svg>                                                                </td>
-                          
+
                                 `;
 
                     } else {
@@ -526,12 +545,13 @@
         <input required type="hidden" name="stok_barang[]" value='${data.stok}' />
     </td>
     <td class="text-center col-5 form-group form-group-alt" id="jumlah_cart" name="jumlah_cart">
-        <input required type="text" class="form-control form-control-sm" name="jumlah_barang[]" onchange="hitungStokTotal(this)" data-harga="${data.harga}" data-disc="${data.disc}" data-stok="${data.stok}" data-kategori_satuan="${data.kategori_satuan}" >
+    <input required type="text" class="form-control form-control-sm total_barang" name="jumlah_barang[]" data-harga="${data.harga}" data-disc="${data.disc}" data-stok="${data.stok}" data-kategori_satuan="${data.kategori_satuan}">
     </td>
     <td class="text-center col-5">
-        <div class="text"></div>
-        <input required type="hidden" name="sisaStok[]" class="form-control sisaStok" readonly />
+        <div class="text">Masukkan jumlah barang</div>
+        <input required type="hidden" name="sisaStok[]" class="form-control sisaStok"  readonly />
     </td>
+
     <td class="col-2">
         <button type="button" class="btn btn-link" id="hapus-barang-cart">
             <svg class="icon-32" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -565,22 +585,46 @@
 
 
     <script>
-function hitungStokTotal(input) {
-    const stokAwal = parseFloat(input.getAttribute('data-stok'));
-    const jumlahBarang = parseFloat(input.value);
-    const sisaStok = stokAwal - jumlahBarang;
+        // Fungsi untuk menghitung stok total
+        function hitungStokTotal(input) {
+            const stokAwal = parseFloat(input.getAttribute('data-stok'));
+            const jumlahBarang = parseFloat(input.value);
 
-    const sisaStokElement = input.closest('tr').querySelector('.text');
-    const sisaStokInput = input.closest('tr').querySelector('.sisaStok');
-    
-    if (sisaStokElement) {
-        sisaStokElement.textContent = sisaStok >= 0 ? sisaStok : 'Stok tidak cukup';
-    }
-    
-    if (sisaStokInput) {
-        sisaStokInput.value = sisaStok >= 0 ? sisaStok : 0; // Ensure no negative values
-    }
-}
+            // Pengecekan apakah input kosong
+            if (isNaN(jumlahBarang)) {
+                const sisaStokElement = input.closest('tr').querySelector('.text');
+                const sisaStokInput = input.closest('tr').querySelector('.sisaStok');
+
+                if (sisaStokElement) {
+                    sisaStokElement.textContent = 'Inputkan Stok'; // Pesan jika input kosong
+                }
+
+                if (sisaStokInput) {
+                    sisaStokInput.value = ''; // Kosongkan nilai sisa stok jika input kosong
+                }
+                return; // Keluar dari fungsi jika input kosong
+            }
+
+            const sisaStok = stokAwal - jumlahBarang;
+
+            const sisaStokElement = input.closest('tr').querySelector('.text');
+            const sisaStokInput = input.closest('tr').querySelector('.sisaStok');
+
+            if (sisaStokElement) {
+                sisaStokElement.textContent = sisaStok >= 0 ? sisaStok : 'Stok tidak cukup';
+            }
+
+            if (sisaStokInput) {
+                sisaStokInput.value = sisaStok >= 0 ? sisaStok : 0; // Pastikan tidak ada nilai negatif
+            }
+        }
+
+        // Event listener menggunakan jQuery
+        $(document).on('keyup', '.total_barang', function() {
+            hitungStokTotal(this); // Panggil fungsi dengan elemen input sebagai argumen
+        });
+
+
 
 
 
